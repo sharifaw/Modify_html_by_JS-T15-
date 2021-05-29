@@ -1,0 +1,47 @@
+.margin-5 {
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.padding-10 {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    flex-flow: wrap row;
+}
+
+main {
+    width: 60%;
+}
+
+nav, aside {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.green-text {
+    color: green;
+}
+
+.purple-text {
+    color: purple;
+}
