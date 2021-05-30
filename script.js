@@ -14,18 +14,22 @@ const link7 = nav.insertAdjacentHTML("beforeend",'<a href="#">Link 7</a>');
 const h1 = document.querySelector('h1').innerHTML = 'Main Content Here';
 
 // select main element
-const main = document.querySelector('main');
 
+const mainParagraphs = document.querySelectorAll('main p'); 
 // make a function for changing text colors
-function changingColor (elements) 
+function changingParagraphsColor(paragraphs) 
 {
-    for (let element = 1; element < elements.children.length ; element++) 
+    
+    for (let paragraph = 0; paragraph < paragraphs.length ; paragraph++) 
     {
 
-        elements.children[element].style.color= "purple";
+        paragraphs[paragraph].classList.add('purple-text');
     }
 }
-changingColor(main);
+changingParagraphsColor(mainParagraphs);
+// or we can select the whole p like this 
+// main = document.querySelectorAll("main p");
+
 
 // select aside element
 const aside = document.querySelector('aside');
@@ -33,12 +37,12 @@ const aside = document.querySelector('aside');
 // modify paragraphs 
 const p1 = aside.children[0];
 p1.innerHTML = "<h4>Title 1</h4> <p>comment 1</p>";
-p1.style.color = "red";
+p1.classList.add('red-text');
 
 const p2 = aside.children[1];
 p2.innerHTML = "<h4>Title 2</h4> <p>comment 2</p>";
-p2.style.color = "blue";
+p2.classList.add('blue-text');
 
 const p3 = aside.children[2];
 p3.innerHTML = "<h4>Title 3</h4> <p>comment 3</p>";
-p3.style.color = "green";
+p3.classList.add('green-text');
