@@ -1,25 +1,36 @@
+//select the nav element
 const nav = document.querySelector('nav');
 
+// add an anchor link 1 element as a first child of a nav element
 const link1 = nav.insertAdjacentHTML("afterbegin",'<a href="#">Link 1</a>');
 
-const link2 = nav.querySelectorAll('a')[2].insertAdjacentHTML('afterend','<a href="#">Link 4</a>');
+// add an anchor link4 as a sibling of link3
+const link4 = nav.querySelectorAll('a')[2].insertAdjacentHTML('afterend','<a href="#">Link 4</a>');
 
+// add an anchor link7 as a last child of a nav element
 const link7 = nav.insertAdjacentHTML("beforeend",'<a href="#">Link 7</a>');
 
+// changing the h1 content
 const h1 = document.querySelector('h1').innerHTML = 'Main Content Here';
 
-//function changingColor(color) {}
-
+// select main element
 const main = document.querySelector('main');
 
-for (let i = 1; i < main.children.length ; i++) 
+// make a function for changing text colors
+function changingColor (elements) 
 {
-    
-    main.children[i].style.color= "purple";
-}
+    for (let element = 1; element < elements.children.length ; element++) 
+    {
 
+        elements.children[element].style.color= "purple";
+    }
+}
+changingColor(main);
+
+// select aside element
 const aside = document.querySelector('aside');
 
+// modify paragraphs 
 const p1 = aside.children[0];
 p1.innerHTML = "<h4>Title 1</h4> <p>comment 1</p>";
 p1.style.color = "red";
@@ -31,6 +42,3 @@ p2.style.color = "blue";
 const p3 = aside.children[2];
 p3.innerHTML = "<h4>Title 3</h4> <p>comment 3</p>";
 p3.style.color = "green";
-
-
-alert(p3.previousElementSibling.innerHTML)
